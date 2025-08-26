@@ -10,7 +10,6 @@ services:
       - ./certs/uptime_kuma_key.pem:/app/data/docker-tls/uptime-kuma.key
       - ./certs/uptime_kuma_fullchain.pem:/app/data/docker-tls/uptime-kuma.crt 
       - ./certs/ca.cert.pem:/app/data/docker-tls/ca.cert.pem
-        #- /var/run/docker.sock:/var/run/docker.sock #  sharing docker.sock with Uptime Kuma container to monitor docker container statues. 
     restart: unless-stopped
     environment:
       PUID: "1000"
